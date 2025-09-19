@@ -1,0 +1,8 @@
+C:\Users\agliati.21076\Documents\Visual Studio 2022\Projects\Pronto_soccorso\Pronto_soccorso\obj\Debug\Pronto_soccorso.csproj.AssemblyReference.cache
+C:\Users\agliati.21076\Documents\Visual Studio 2022\Projects\Pronto_soccorso\Pronto_soccorso\obj\Debug\Pronto_soccorso.csproj.CoreCompileInputs.cache
+C:\Users\agliati.21076\Documents\Visual Studio 2022\Projects\Pronto_soccorso\Pronto_soccorso\bin\Debug\Pronto_soccorso.exe.config
+C:\Users\agliati.21076\Documents\Visual Studio 2022\Projects\Pronto_soccorso\Pronto_soccorso\bin\Debug\Pronto_soccorso.exe
+C:\Users\agliati.21076\Documents\Visual Studio 2022\Projects\Pronto_soccorso\Pronto_soccorso\bin\Debug\Pronto_soccorso.pdb
+C:\Users\agliati.21076\Documents\Visual Studio 2022\Projects\Pronto_soccorso\Pronto_soccorso\obj\Debug\Pronto_soccorso.exe
+C:\Users\agliati.21076\Documents\Visual Studio 2022\Projects\Pronto_soccorso\Pronto_soccorso\obj\Debug\Pronto_soccorso.pdb
+C:\Users\agliati.21076\Documents\Visual Studio 2022\Projects\Pronto_soccorso\Pronto_soccorso\obj\Debug\Pronto_soccorso.exe.config
