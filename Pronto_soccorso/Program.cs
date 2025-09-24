@@ -5,17 +5,18 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
+using System.Web;           
 
 namespace Pronto_soccorso
 {
-    internal class Program
+    class Program
     {
         // Rendi i campi e i metodi non statici statici, oppure crea un'istanza di Program
+        protected static List<Paziente> Pazienti_visitati = new List<Paziente>();
         protected static Codice Rosso = new Codice("Rosso", "Critico");
         protected static Codice Giallo = new Codice("Giallo", "Medio critico");
         protected static Codice Verde = new Codice("Verde", "Poco Critico");
-        static List<Paziente> Pazienti_visitati = new List<Paziente>();
+        
 
         static void Main(string[] args)
         {
@@ -64,11 +65,13 @@ namespace Pronto_soccorso
                             if (num == 0)
                                 break;
                         }
+                        if (num == 0)       
+                            break;
                         Rosso.ModificaPazieni(num);
-                        break;
+                                break;
                     case 3:
                         Console.WriteLine("===================== VISUALIZZA CODICE GIALLO ======================");
-                        Giallo.VisualizzaPazienti();
+                        count = Giallo.VisualizzaPazienti();
                         while (num < 1 || num > count)
                         {
                             Console.WriteLine("| Inserisci il numero del paziente da modificare (0 per uscire)    |");
@@ -78,11 +81,13 @@ namespace Pronto_soccorso
                             if (num == 0)
                                 break;
                         }
-                        Rosso.ModificaPazieni(num);
+                        if (num == 0)
+                            break;
+                        Giallo.ModificaPazieni(num);
                         break;
                     case 4:
                         Console.WriteLine("====================== VISUALIZZA CODICE VERDE ======================");
-                        Verde.VisualizzaPazienti();
+                        count = Verde.VisualizzaPazienti();
                         while (num < 1 || num > count)
                         {
                             Console.WriteLine("| Inserisci il numero del paziente da modificare (0 per uscire)    |");
@@ -92,12 +97,15 @@ namespace Pronto_soccorso
                             if (num == 0)
                                 break;
                         }
-                        Rosso.ModificaPazieni(num);
+                        if (num == 0)
+                            break;
+                        Verde.ModificaPazieni(num);
                         break;
 
                     default:
 
                         Console.WriteLine("| Scelta non disponibile                                            |");
+                        Console.ReadKey();
                         break;
 
                 }
@@ -129,7 +137,7 @@ namespace Pronto_soccorso
                 // Salva tutti i pazienti visitati in pazienti.csv
                 using (var writer = new StreamWriter(filePathPazienti))
                 {
-                    writer.WriteLine("Severità,Nome,Cognome,Codice Fiscale,Data di Nascita,Data di Ammissione, Visite");
+                    writer.WriteLine("Nome,Cognome,Codice Fiscale,Data di Nascita,Visite");
                     foreach (Paziente paziente in Pazienti_visitati)
                     {
                         paziente.scriviPazienteVisitato(writer);
@@ -181,20 +189,12 @@ namespace Pronto_soccorso
                             var line = reader.ReadLine();
                             var values = line.Split(',');
                             // Assumi che i valori siano nell'ordine: Severità, Nome, Cognome, Codice Fiscale, Data di Nascita, Data di Ammissione, Visitato
-                            int severita = int.Parse(values[0]);
-                            string nome = values[1];
-                            string cognome = values[2];
-                            string codiceFiscale = values[3];
-                            DateTime dataNascita = DateTime.Parse(values[4]);
-                            DateTime dataAmmissione = DateTime.Parse(values[5]);
-                            List<Visita> visite = ParseVisite(values[5]); // Implementa un metodo per convertire la stringa in una lista di visite
-                            Paziente paziente = new Paziente(nome, cognome, codiceFiscale, dataNascita, dataAmmissione, severita, visite);
-                            if (severita >= 8 && severita <= 10)
-                                Rosso.AggiungiPaziente(paziente);
-                            else if (severita >= 4 && severita <= 7)
-                                Giallo.AggiungiPaziente(paziente);
-                            else if (severita >= 1 && severita <= 3)
-                                Verde.AggiungiPaziente(paziente);
+                            string nome = values[0];
+                            string cognome = values[1];
+                            string codiceFiscale = values[2];
+                            DateTime dataNascita = DateTime.Parse(values[3]);
+                                List<Visita> visite = ParseVisite(values[4]); // Implementa un metodo per convertire la stringa in una lista di visite
+                            Paziente paziente = new Paziente(nome, cognome, codiceFiscale, dataNascita, visite);
                         }
                     }
                 }
@@ -247,6 +247,7 @@ namespace Pronto_soccorso
                         if (int.TryParse(r_temp, out int r_parsed))
                             r = Convert.ToInt32(r_temp);
                     }
+                    Console.Clear();
                     switch (r)
                     {
                         case 1:
@@ -258,12 +259,13 @@ namespace Pronto_soccorso
                             break;
                         default:
                             Console.WriteLine("| Scelta non disponibile                                            |");
+                            Console.ReadKey();
                             break;
                     }
                 }
                 if (paziente.GetSeverita() >= 8 && paziente.GetSeverita() <= 10)
                 {
-                    Rosso.AggiungiPaziente(paziente);
+                    Rosso.AggiungiPaziente(paziente);       
                     Console.WriteLine("Paziente aggiunto al codice ROSSO");
                     Rosso.OrdinaPazientiPerSeverita();
                 }
@@ -308,6 +310,13 @@ namespace Pronto_soccorso
 
 
         }
+        public static void VisitaEffettuata(int n, Codice codice)
+        {
+            codice.VisitaEffetuata(n);
+            Pazienti_visitati.Add(codice.GetPaziente(n));
+            codice.RimuoviPaziente(n);
+        }
+
 
 
     }

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\pronto_soccorso\\paziente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|c:\\users\\agliati.21076\\documents\\visual studio 2022\\projects\\pronto_soccorso\\pronto_soccorso\\paziente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|solutionrelative:pronto_soccorso\\paziente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\pronto_soccorso\\codice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|solutionrelative:pronto_soccorso\\codice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|c:\\users\\agliati.21076\\documents\\visual studio 2022\\projects\\pronto_soccorso\\pronto_soccorso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\pronto_soccorso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|solutionrelative:pronto_soccorso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\pronto_soccorso\\visita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|solutionrelative:pronto_soccorso\\visita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\pronto_soccorso\\codice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3A9FE34-755E-4D4B-9414-B2C986861DBA}|Pronto_soccorso\\Pronto_soccorso.csproj|solutionrelative:pronto_soccorso\\codice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 271,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\Pronto_soccorso\\Program.cs",
+              "RelativeDocumentMoniker": "Pronto_soccorso\\Program.cs",
+              "ToolTip": "C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\Pronto_soccorso\\Program.cs",
+              "RelativeToolTip": "Pronto_soccorso\\Program.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAnwMoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T06:37:15.539Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -40,48 +53,35 @@
               "RelativeDocumentMoniker": "Pronto_soccorso\\Paziente.cs",
               "ToolTip": "C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\Pronto_soccorso\\Paziente.cs",
               "RelativeToolTip": "Pronto_soccorso\\Paziente.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAADwvzEAAACsAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAiwEoAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T06:46:24.692Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Visita.cs",
               "DocumentMoniker": "C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\Pronto_soccorso\\Visita.cs",
               "RelativeDocumentMoniker": "Pronto_soccorso\\Visita.cs",
               "ToolTip": "C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\Pronto_soccorso\\Visita.cs",
               "RelativeToolTip": "Pronto_soccorso\\Visita.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAswBwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T06:59:06.83Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Codice.cs",
               "DocumentMoniker": "C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\Pronto_soccorso\\Codice.cs",
               "RelativeDocumentMoniker": "Pronto_soccorso\\Codice.cs",
               "ToolTip": "C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\Pronto_soccorso\\Codice.cs",
               "RelativeToolTip": "Pronto_soccorso\\Codice.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAewEAAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAG0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T06:40:45.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\Pronto_soccorso\\Program.cs",
-              "RelativeDocumentMoniker": "Pronto_soccorso\\Program.cs",
-              "ToolTip": "C:\\Users\\agliati.21076\\Documents\\Visual Studio 2022\\Projects\\Pronto_soccorso\\Pronto_soccorso\\Program.cs",
-              "RelativeToolTip": "Pronto_soccorso\\Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwC8AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T06:37:15.539Z",
               "EditorCaption": ""
             }
           ]

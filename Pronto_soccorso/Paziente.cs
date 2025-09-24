@@ -30,15 +30,12 @@ namespace Pronto_soccorso
             Severita = severità;
         }
 
-        public Paziente(string nome, string cognome, string codiceFiscale, DateTime dataNascita, DateTime dataAmmissione, int severità, List<Visita> visite) 
+        public Paziente(string nome, string cognome, string codiceFiscale, DateTime dataNascita, List<Visita> visite) 
         {
             Nome = nome;
             Cognome = cognome;
             CodiceFiscale = codiceFiscale;
             DataNascita = dataNascita;
-            Visite = new List<Visita>();
-            DataAmmissione = dataAmmissione;
-            Severita = severità;
             Visite = visite;
         }
         public void AggiungiVisita(Visita visita)
@@ -75,7 +72,70 @@ namespace Pronto_soccorso
 
         public void scriviPazienteVisitato(StreamWriter writer)
         {
-            writer.WriteLine($"{Severita},{Nome},{Cognome},{CodiceFiscale},{DataNascita.ToShortDateString()},{DataAmmissione},{Visite}");
+            writer.WriteLine($"{Nome},{Cognome},{CodiceFiscale},{DataNa scita.ToShortDateString()},");
+            foreach (var visita in Visite)
+            {
+                visita.scriviVisita(writer);
+            }       
+        }
+
+        public void VisitaPaziente()
+        {
+            bool exit = false;
+            Visita visita = null;
+            while (!exit)
+            {
+                int r = -1;
+                string descrizione, codice;
+                DateTime DataOra;
+                Console.WriteLine("========================== VISITA PAZIENTE =========================");
+                Console.WriteLine("|                                                                   |");
+                Console.WriteLine("| Inserisci la descrizione della visita                             |");
+                descrizione = Console.ReadLine().Trim();
+                DataOra = DateTime.Now;
+                codice = CodiceFiscale + DataOra.ToString("yyyyMMddHHmmss");
+                Visita v_temp = new Visita(DataOra, codice, descrizione);
+                Console.WriteLine("|                                                                   |");
+                Console.WriteLine("=====================================================================");
+                Console.WriteLine("| Visita:                                            |");
+                Console.Write("| ");
+                v_temp.VisualizzaVisita();
+                Console.Write("\n");
+                Console.WriteLine("| [1] Si                                                            |");
+                Console.WriteLine("| [2] No                                                            |");
+                {
+                    string r_temp = Console.ReadLine().Trim();
+                    if (int.TryParse(r_temp, out int r_parsed))
+                        r = Convert.ToInt32(r_temp);
+                }
+                Console.Clear();
+                switch (r)
+                {
+                    case 1:
+                        visita = v_temp;
+                        exit = true;
+                        break;
+                    case 2:
+                        Console.Clear();
+                        break;
+                    default:
+                        Console.WriteLine("| Scelta non disponibile                                            |");
+                        Console.ReadKey();
+                        break;
+                }
+            }
+            
+            Visite.Add(visita);
+        }
+
+        public void VisitaEffetuata()
+        {
+            Visitato = true;
+        }
+
+        public void ModificaPaziente()
+        {
+
         }
     }
 }
